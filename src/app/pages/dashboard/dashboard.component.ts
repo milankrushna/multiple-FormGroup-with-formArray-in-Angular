@@ -31,12 +31,12 @@ export class DashboardComponent implements OnInit{
     }
 
     onnewGroup(){
-     var xxx =  new FormGroup({
+     var singleGroup =  new FormGroup({
         "name" : new FormControl(null),
         "email" : new FormControl(null),
         "contact" : new FormControl(null)
       });
-      (<FormArray>this.student.get('profile')).push(xxx)
+      (<FormArray>this.student.get('profile')).push(singleGroup)
     }
 
     get profile():FormArray{
